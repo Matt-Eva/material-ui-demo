@@ -70,3 +70,4 @@ Here's an example of the difference between using `border-box` and `content-box`
     background-color: hsl(210, 90%, 50%)
 }
 ```
+<img width="144" alt="Screen Shot 2022-04-17 at 3 56 25 PM" src="https://user-images.githubusercontent.com/89106805/163735391-53a71d5f-9d98-420f-a1de-a774edf63b61.png">
