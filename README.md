@@ -11,10 +11,10 @@ Once you've run this command, you should see that `@mui/material`, `@emotion/rea
 ## Basic Setup
 
 ### Importing Roboto
-MUI notes on their installation page that it was designed with the Roboto font in mind. So, in order for us to work seamlessly with MUI's library, we're going to want to make sure we include the Roboto font in our application. We can do this by including the link tag provided by MUI on their installation page - <link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-/> - in the `head` section of our `index.html` file, which is stored within our `public` folder within our React app. This imports the Roboto font from Google fonts and allows you to use it throughout your application, which will allow MUI components to access it when they need it.
+MUI notes on its installation page that it was designed with the Roboto font in mind. So, in order for us to work seamlessly with MUI's library, we're going to want to make sure we include the Roboto font in our application. We can do this by including the link tag provided by MUI on its installation page -  <!-- <link
+  <!-- rel="stylesheet" -->
+  <!-- href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" -->
+<!--/> -->  - in the `head` section of our `index.html` file, which is stored within our `public` folder within our React app. This imports the Roboto font from Google fonts and allows you to use it throughout your application, which will allow MUI components to access it when they need it.
 
 ### Setting Default Styles
 
