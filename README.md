@@ -10,13 +10,13 @@ Once you've run this command, you should see that `@mui/material`, `@emotion/rea
 
 ## Basic Setup
 
-#### Importing Roboto
+### Importing Roboto
 MUI notes on their installation page that it was designed with the Roboto font in mind. So, in order for us to work seamlessly with MUI's library, we're going to want to make sure we include the Roboto font in our application. We can do this by including the link tag provided by MUI on their installation page - <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
 /> - in the `head` section of our `index.html` file, which is stored within our `public` folder within our React app. This imports the Roboto font from Google fonts and allows you to use it throughout your application, which will allow MUI components to access it when they need it.
 
-#### Setting Default Styles
+### Setting Default Styles
 
 You should follow these steps when setting up any new React app, whether or not you work with MUI.
 
@@ -34,6 +34,8 @@ We're also going to want to clear away all of the CSS in `App.css` and `index.cs
 (Note: setting the font-family to Roboto is specific to using MUI only, not to setting up any React app. If you have a different default font you want to use, make sure to import it into your app and set its font family here.)
 
 Setting these global default styles will remove default margin and padding from any JSX element, which will make styling easier and more straightforward. It also sets the `box-sizing` attribute to `border-box`, as opposed to the default `content-box`. Let's discuss the difference between the two.
+
+#### Border-box vs Content-box
 
 If you give an element with a `box-sizing` style of `border-box` a set width and height, it will not grow larger than that width and/or height, even if you give it padding and a border. This is a big difference than and element with a `box-sizing` attribute of `content-box` (which is the default - if you've never used the `box-sizing` style attribute before, it means you've been working with a `content-box` style). The width and height of a `content-box` element will be the width that's been set, plus the padding, plus the border width. 
 
@@ -71,3 +73,7 @@ Here's an example of the difference between using `border-box` and `content-box`
 }
 ```
 <img width="144" alt="Screen Shot 2022-04-17 at 3 56 25 PM" src="https://user-images.githubusercontent.com/89106805/163735391-53a71d5f-9d98-420f-a1de-a774edf63b61.png">
+
+
+As you can see, the element with `border-box` never grows beyond 100px, even though we've given it the same padding and border as our element styled with `content-box`.
+
