@@ -74,3 +74,15 @@ Here's an example of the difference between using `border-box` and `content-box`
 
 As you can see, the element with `border-box` never grows beyond 100px, even though we've given it the same padding and border as our element styled with `content-box`.
 
+## Using MUI Components
+
+MUI comes with a set of basic components and a set of more advanced components that require some extra installation. Let's get started with the basic components.
+
+### Basic Components.
+
+
+
+
+## Resources
+
+List of <a href="https://mui.com/material-ui/material-icons/">MUI Icons</a>
