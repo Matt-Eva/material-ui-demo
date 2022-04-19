@@ -141,17 +141,23 @@ We can also set the spacing between columns within the grid by assigning our Gri
 </Grid>
 ```
 
-On extra-small screens, the `<h2>` and `<h3>` elements will both occupy the first row in the grid - the `<h1>` will start to occupy the second row in the Grid. If you were to use Grid yourself, you'd likely want to set column sizing for each different breakpoint
+On extra-small screens, the `<h2>` and `<h3>` elements will both occupy the first row in the grid - the `<h1>` will start to occupy the second row in the Grid. If you were to use Grid yourself, you'd likely want to set column sizing for each different breakpoint.
+
+Read up more on MUI Grid <a href="https://mui.com/material-ui/react-grid/">here</a>.
 
 #### Modals
 
-
+Read about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
 
 #### Drawer (Collapsable Menu)
+
+Read about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
 
 ### Advanced Components
 
 #### Datetime
+
+
 
 ## Resources
 
