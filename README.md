@@ -78,11 +78,82 @@ As you can see, the element with `border-box` never grows beyond 100px, even tho
 
 MUI comes with a set of basic components and a set of more advanced components that require some extra installation. Let's get started with the basic components.
 
+#### A Note on Importing
+
+Before we move on to the components themselves, let's briefly touch upon importing components.
+We'll use a standard Button component as an example.
+
+There are two ways we can import components from MUI into our React components:
+```
+import Button from "@mui/material/Button"
+or
+import { Button } from "@mui/material"
+```
+
+The first method is preferred, even though the second method is more convenient once you start importing multipel components from MUI into the same React component. The reason the first method is preferred is that it doesn't load the entire MUI library, then select resources from that library - it selects a specific subset of the MUI library (Button) and extracts the resource that specific subset contains. This is much more efficient, and will improve performance.
+
 ### Basic Components.
 
+This is an overview of a few of MUI's basic components. Many more are included on their website. (I suggest you check them out!)
+
+#### Grid
+
+MUI offers its own version of CSS grid via a component called Grid. In order to use Grid, all you need to do is import it into your component.
+
+You can use the Grid component to set a Grid container and a Grid item within that Grid container. To set it as a container, you would write "container" inside of the opening Grid tag: `<Grid container/><Grid>`. To set an item, you write "item" inside the opening Grid tag: `<Grid item></Grid>`. All Grid items should be wrapped within the Grid Container - the elements you want to display should be wrapped inside the Grid item. Like so:
+
+```
+<Grid container>
+    <Grid item>
+        <h2>Header</h2>
+    </Grid>
+</Grid>
+```
+This sets our `<h2>` element as a item within our Grid container
+
+MUI's Grid is split up into 12 different columns of equal width. You can set a Grid item to span a certain number of columns in your grid. The number of columns an item spans can vary for different breakpoints - xs, sm, md, lg, and xl. Each of these breakpoints corresponds with the following screen sizes:
+
+```
+xs: < 600px,
+sm: > 600px, < 900px,
+md: > 900px, < 1200px,
+lg: > 1200px, < 1536px,
+xl: > 1536px
+```
+
+This is a quick and simple way to handle layout changes that would be controlled by Media queries in basic CSS.
+
+Once the number of columns spanned by Grid items within a Grid container exceeds 12, a new row is created.
+
+We can also set the spacing between columns within the grid by assigning our Grid container a "spacing" attribute. This is what a basic Grid format might look like:
+
+```
+<Grid container spacing={2}>
+    <Grid item xs={4}>
+        <h2>Header</h2>
+    </Grid>
+    <Grid item xs={8}>
+        <h3>H3 Header</h3>
+    </Grid>
+    <Grid item xs={6}>
+        <h1>Big Header</h1>
+    </Grid>
+</Grid>
+```
+
+On extra-small screens, the `<h2>` and `<h3>` elements will both occupy the first row in the grid - the `<h1>` will start to occupy the second row in the Grid. If you were to use Grid yourself, you'd likely want to set column sizing for each different breakpoint
+
+#### Modals
 
 
+
+#### Drawer (Collapsable Menu)
+
+### Advanced Components
+
+#### Datetime
 
 ## Resources
 
 List of <a href="https://mui.com/material-ui/material-icons/">MUI Icons</a>
+<a href="https://mui.com/material-ui/customization/breakpoints/#default-breakpoints">Mui breakpoints</a> 
