@@ -1,0 +1,34 @@
+.my-modal{
+
+}
+
+.my-modal__open-modal {
+    cursor: pointer;
+    background-color: hsl(100, 30%, 40%);
+    color: white;
+    border: none;
+    height: 30px;
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+.my-modal__modal-content {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    padding: 10px;
+    justify-items: center;
+}
+
+.my-modal__close-modal {
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
+    justify-self: end;
+}
