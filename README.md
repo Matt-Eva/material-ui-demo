@@ -15,9 +15,9 @@ MUI notes on its installation page that it was designed with the Roboto font in 
 
 ### Setting Default Styles
 
-You should follow these steps when setting up any new React app, whether or not you work with MUI.
+We're going to want to set up some default styles to ensure that MUI's library of components works correctly. It's likely a good idea to set up default styles like this regardless of whether or not you're working with a CSS library, as it will make styling easier and allow you to set some basic themes for your webpage.
 
-We're also going to want to clear away all of the CSS in `App.css` and `index.css` that were created when we ran `create-react-app`. Then, we're going to want to set some default styles in or index.js that will apply to every JSX element in our application. We can do this by using the universal selector `*`. Here are the following styles we'll want to set:
+First, we're going to want to clear away all of the CSS styles in `App.css` and `index.css` that were created when we ran `create-react-app`. Then, we're going to want to add our default styles in index.css that will apply to every JSX element in our application. We can do this by using the universal selector `*`. Here are the following styles we'll want to set:
 
 ```
 * {
@@ -28,51 +28,9 @@ We're also going to want to clear away all of the CSS in `App.css` and `index.cs
 }
 ```
 
-(Note: setting the font-family to Roboto is specific to using MUI only, not to setting up any React app. If you have a different default font you want to use, make sure to import it into your app and set its font family here.)
+(Note: setting the font-family to Roboto is specific to using MUI only, not to setting up any React app. If you have a different default font you want to use, make sure to <a href="https://fonts.google.com/">import it</a> into your app and set its font family here.)
 
-Setting these global default styles will remove default margin and padding from any JSX element, which will make styling easier and more straightforward. It also sets the `box-sizing` attribute to `border-box`, as opposed to the default `content-box`. Let's discuss the difference between the two.
-
-### Border-box vs Content-box
-
-If you give an element with a `box-sizing` style of `border-box` a set width and height, it will not grow larger than that width and/or height, even if you give it padding and a border. This is a big difference than and element with a `box-sizing` attribute of `content-box` (which is the default - if you've never used the `box-sizing` style attribute before, it means you've been working with a `content-box` style). The width and height of a `content-box` element will be the width that's been set, plus the padding, plus the border width. 
-
-Setting all elements as `border-box` by default makes styling a lot easier - once we give any element a width and height, it will never expand beyond that width or height, even as we add padding and borders. We only have to keep track of one value, instead of three values.
- 
-
-Here's an example of the difference between using `border-box` and `content-box`. The yellow square is being selected by the class name `basic-template`, the green square is being selected by the class name `border-box`, and the blue square is being selected by the class name `content-box`.
-
-```
-.basic-template{
-    width: 100px;
-    height: 100px;
-    background-color: hsl(60, 90%, 80%)
-}
-
-.border-box {
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-    padding: 10px;
-    border: solid;
-    border-width: 4px;
-    background-color: green;
-}
-
-.content-box {
-    /* content-box is default for box-sizing attribute */
-    box-sizing: content-box;
-    height: 100px;
-    width: 100px;
-    padding: 10px;
-    border: solid;
-    border-width: 4px;
-    background-color: hsl(210, 90%, 50%)
-}
-```
-<img width="144" alt="Screen Shot 2022-04-17 at 3 56 25 PM" src="https://user-images.githubusercontent.com/89106805/163735391-53a71d5f-9d98-420f-a1de-a774edf63b61.png">
-
-
-As you can see, the element with `border-box` never grows beyond 100px, even though we've given it the same padding and border as our element styled with `content-box`.
+Setting these global default styles will remove default margin and padding from any JSX element, which will make styling easier and more straightforward. It also sets the `box-sizing` attribute to `border-box`, as opposed to the default `content-box`, which is discussed <a href="https://github.com/Matt-Eva/intro-css-demo">here</a>.
 
 ## Using MUI Components
 
@@ -144,6 +102,8 @@ We can also set the spacing between columns within the grid by assigning our Gri
 On extra-small screens, the `<h2>` and `<h3>` elements will both occupy the first row in the grid - the `<h1>` will start to occupy the second row in the Grid. If you were to use Grid yourself, you'd likely want to set column sizing for each different breakpoint.
 
 Read up more on MUI Grid <a href="https://mui.com/material-ui/react-grid/">here</a>.
+
+I prefer to simply use CSS grid and Flexbox for handling layouts, as I find it provides more flexiblity and agency, but if you like MUI's approach to styling, it's worth checking it out.
 
 #### Modals
 
