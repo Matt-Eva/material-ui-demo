@@ -6,7 +6,9 @@ This application is a demonstration of how to use Material UI in React. We'll co
 
 Getting started with MUI is pretty straight forward. After you've created your new React App by running `npx create-react-app "my-app-name"`, where "my-app-name" is the name of your new React app, you're going to need to install MUI in your application. You can do this by running `npm install @mui/material @emotion/react @emotion/styled` if you use npm or running `yarn add @mui/material @emotion/react @emotion/styled` if you use yarn. For more on installation options, you can view <a href="https://mui.com/material-ui/getting-started/installation/">MUI's page on installation</a>.
 
-Once you've run this command, you should see that `@mui/material`, `@emotion/react`, and `@emotion/styled` have all been added to your `package.json` as dependencies. You're now ready to start using Material UI!
+We're also going to install <a href="https://mui.com/material-ui/material-icons/">MUI Icons</a>, which are incredibly useful for giving your webpage a more polished, professional feel. Run `npm install @mui/icons-material` to gain access to all of MUI's Icons.
+
+Once you've run this command, you should see that `@mui/material`, `@emotion/react`, `@emotion/styled`, and `@mui/icons-material` have all been added to your `package.json` as dependencies. You're now ready to start using Material UI!
 
 ## Basic Setup
 
@@ -34,7 +36,11 @@ Setting these global default styles will remove default margin and padding from 
 
 ## Using MUI Components
 
-MUI comes with a set of basic components and a set of more advanced components that require some extra installation. Let's get started with the basic components.
+You can use MUI to handle all styling aspects of your webpage, but as you build more complex applications or aim for more custom designs, you may not find this to be the best approach. If you're ever in a situation where you feel like you're fighting a CSS Library in order to implement the styles you want, that may be a good indicator that you're relying too heavily on the library, which has an inherently limited scope (or you just need to get better at using the library itself). 
+
+Combining CSS or styled-components with MUI will give you more design flexiblity and control over the structure of your webpage while still allowing you to call upon the full power of MUI's component library. There are a variety of great components that MUI offers that will allow you to set up polished, dynamic functionality without having to go through the arduous process of creating it yourself. My personal approach is to use MUI and other CSS libraries as needed.
+
+Since MUI offers so many components, we're going to cover a few helpful ones that you can use to give your webpage a much more polished aesthetic.
 
 #### A Note on Importing
 
@@ -49,61 +55,6 @@ import { Button } from "@mui/material"
 ```
 
 The first method is preferred, even though the second method is more convenient once you start importing multipel components from MUI into the same React component. The reason the first method is preferred is that it doesn't load the entire MUI library, then select resources from that library - it selects a specific subset of the MUI library (Button) and extracts the resource that specific subset contains. This is much more efficient, and will improve performance.
-
-### Basic Components.
-
-This is an overview of a few of MUI's basic components. Many more are included on their website. (I suggest you check them out!)
-
-#### Grid
-
-MUI offers its own version of CSS grid via a component called Grid. In order to use Grid, all you need to do is import it into your component.
-
-You can use the Grid component to set a Grid container and a Grid item within that Grid container. To set it as a container, you would write "container" inside of the opening Grid tag: `<Grid container/><Grid>`. To set an item, you write "item" inside the opening Grid tag: `<Grid item></Grid>`. All Grid items should be wrapped within the Grid Container - the elements you want to display should be wrapped inside the Grid item. Like so:
-
-```
-<Grid container>
-    <Grid item>
-        <h2>Header</h2>
-    </Grid>
-</Grid>
-```
-This sets our `<h2>` element as a item within our Grid container
-
-MUI's Grid is split up into 12 different columns of equal width. You can set a Grid item to span a certain number of columns in your grid. The number of columns an item spans can vary for different breakpoints - xs, sm, md, lg, and xl. Each of these breakpoints corresponds with the following screen sizes:
-
-```
-xs: < 600px,
-sm: > 600px, < 900px,
-md: > 900px, < 1200px,
-lg: > 1200px, < 1536px,
-xl: > 1536px
-```
-
-This is a quick and simple way to handle layout changes that would be controlled by Media queries in basic CSS.
-
-Once the number of columns spanned by Grid items within a Grid container exceeds 12, a new row is created.
-
-We can also set the spacing between columns within the grid by assigning our Grid container a "spacing" attribute. This is what a basic Grid format might look like:
-
-```
-<Grid container spacing={2}>
-    <Grid item xs={4}>
-        <h2>Header</h2>
-    </Grid>
-    <Grid item xs={8}>
-        <h3>H3 Header</h3>
-    </Grid>
-    <Grid item xs={6}>
-        <h1>Big Header</h1>
-    </Grid>
-</Grid>
-```
-
-On extra-small screens, the `<h2>` and `<h3>` elements will both occupy the first row in the grid - the `<h1>` will start to occupy the second row in the Grid. If you were to use Grid yourself, you'd likely want to set column sizing for each different breakpoint.
-
-Read up more on MUI Grid <a href="https://mui.com/material-ui/react-grid/">here</a>.
-
-I prefer to simply use CSS grid and Flexbox for handling layouts, as I find it provides more flexiblity and agency, but if you like MUI's approach to styling, it's worth checking it out.
 
 #### Modals
 
