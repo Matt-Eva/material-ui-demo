@@ -8,10 +8,10 @@
 a {
   text-decoration: none;
   color: black;
-  transition: 500ms;
+  transition: 300ms;
 }
 
 a:hover {
-  color: hsl(0, 0%, 70%);
-  transition: 500ms;
+  color: hsl(0, 0%, 40%);
+  transition: 300ms;
 }

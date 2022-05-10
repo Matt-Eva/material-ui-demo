@@ -1,21 +1,27 @@
 .my-modal{
-
+    grid-row: 1;
+    grid-column: 5;
+    justify-self: center;
 }
 
-.my-modal__open-modal {
+.my-modal .my-modal__open-modal {
     cursor: pointer;
-    background-color: hsl(100, 30%, 40%);
+    background-color: hsl(200, 70%, 30%);
     color: white;
     border: none;
     height: 30px;
-    font-size: 1rem;
     padding: 3px;
-    border-radius: 2px;
+    width: 130px;
+    margin-right: 5px;
+}
+
+.my-modal .my-modal__open-modal:hover{
+    background-color: hsl(200, 70%, 20%)
 }
 
 .my-modal__modal-content {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 200px);
     left: calc(50% - 200px);
     width: 400px;
     height: 300px;

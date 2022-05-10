@@ -1,3 +1,19 @@
-.link{
-    text-decoration: none;;
+.header {
+    grid-row: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50px 60px 50px calc(100vw - 300px) 140px;
+    padding-right: 10px;
+    background-color: hsl(200, 90%, 60%);
+}
+
+.header__logo{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.header__nav-link{
+    grid-row: 1;
+    grid-column: 3;
+    padding-top: 3.5px;
 }

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Modal from '@mui/material/Modal'
+import Button from '@mui/material/Button'
 import './MyModal.css'
 
 function MyModal() {
@@ -9,11 +10,11 @@ function MyModal() {
 
   return (
     <div className="my-modal">
-      <button onClick={handleOpen} className="my-modal__open-modal">Open Modal</button>
+      <Button variant="contained" onClick={handleOpen} className="my-modal__open-modal">Open Modal</Button>
       <Modal open={open} onClose={handleClose}>
         <div className="my-modal__modal-content">
           <h1 className="my-modal__modal-header">This is a Modal</h1>
-          <button onClick={handleClose} className="my-modal__close-modal">Close</button>
+          <Button variant='outlined' onClick={handleClose} className="my-modal__close-modal">Close</Button>
         </div>
       </Modal>
     </div>
