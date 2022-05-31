@@ -54,7 +54,11 @@ or
 import { Button } from "@mui/material"
 ```
 
-The first method is preferred, even though the second method is more convenient once you start importing multipel components from MUI into the same React component. The reason the first method is preferred is that it doesn't load the entire MUI library, then select resources from that library - it selects a specific subset of the MUI library (Button) and extracts the resource that specific subset contains. This is much more efficient, and will improve performance.
+The first method is preferred, even though the second method is more convenient once you start importing multiple components from MUI into the same React component. 
+
+The first method is preferred because it doesn't pull in in every module from the MUI library, then select resources from that library, which is what the second method does. Instead, it selects a specific subset of the MUI library (Button) and extracts the resource that specific subset contains. This is much more efficient, and will improve performance.
+
+Check out MUI's <a href="https://mui.com/material-ui/guides/minimizing-bundle-size/">documentation</a> to learn more.
 
 #### Modals
 
