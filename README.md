@@ -66,19 +66,40 @@ This example application uses a variety of different MUI components to implement
 
 #### Modals
 
+You may not be familiar with the term 'modal', but you've certainly encountered them before. A modal refers to a pop-up window that appears as an overlay over the rest of your webpage. If you've already forked, cloned, and installed this application, go ahead and start it up. Clicking on the blue 'login' button in the upper right-hand corner will open up a login modal.
+
+Modals offer a great way to show specific components without redirecting your user to an entirely new webpage. While there are certainly times where a redirect is appropriate, using modals gives you a powerful UI tool that makes your user experience easier and more streamlined.
+
+The modal in this application is created in the `MyModal` component, which is in the `Header` folder under `components`. There's a lot more going on in here than is required to set up a basic modal, but for the time being let's just focus on how we're getting this modal up and running.
+
+The first step in getting our modal up and running is, of course, importing it from MUI: `import Modal from '@mui/material/Modal'`. 
+
+To use our modal in our component, we simply reference it: `<Modal></Modal`. (Note that we capitalize Modal and give it an opening and a closing tag.)
+
+Because modals are dynamic - they can be toggled to either appear or disappear - we're also going to need our useState hook to create some state that determines whether or not our modal is open or closed. In the example, I've created a stateful variable called `open`, with an initial value `false`.
+
+Modals receive a prop, `open`, which determines whether or not the modal is visible or hidden. If `open` receives a value of `false`, the modal is hidden - if `true`, it's visible. That's why we set the initial state of our `open` state variable to `false` - we want our modal to be invisible upon pageload. Let's pass our `open` state to our modal's `open` prop:
+
+```
+function MyComponent(){
+    const [open, setOpen] = useState(false)
+
+    return (
+        <div>
+            <Modal open={open}>
+            </Modal>
+        </div>
+    )
+}
+```
+
 Read about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
 
 #### Drawer (Collapsable Menu)
 
 Read about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
 
-### Advanced Components
-
-#### Datetime
-
-
 
 ## Resources
 
 List of <a href="https://mui.com/material-ui/material-icons/">MUI Icons</a>
-<a href="https://mui.com/material-ui/customization/breakpoints/#default-breakpoints">Mui breakpoints</a> 
