@@ -1,9 +1,10 @@
 import React from 'react'
-import "./Wal"
 
-function WalrusCard() {
+function WalrusCard({image}) {
   return (
-    <div>WalrusCard</div>
+    <div>
+      WalrusCard
+    </div>
   )
 }
 

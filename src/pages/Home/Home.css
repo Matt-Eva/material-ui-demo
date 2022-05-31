@@ -1,4 +1,4 @@
 .home {
     display: grid;
-    grid-template-rows: 50px calc(100vh - 50px);
+    grid-template-rows: 50px 200px calc(100vh - 250px);
 }

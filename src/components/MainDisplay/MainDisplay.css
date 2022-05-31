@@ -1,5 +1,26 @@
-.main-display__card-img {
-    height: 200px;
-    width: 200px;
+.main-display {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 20px;
+    column-gap: 10px;
+    width: 100vw;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.main-display__image-div{
+    height: 300px;
+    width: 250px;
+    background-color: hsl(180, 70%, 85%);
+}
+
+.main-display__img{
     object-fit: cover;
+    width: 200px;
+    height: 250px;
+    margin-left: 25px;
+}
+
+.main-display__slide-div {
+    overflow: hidden;
 }

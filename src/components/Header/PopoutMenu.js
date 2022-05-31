@@ -14,7 +14,10 @@ function PopoutMenu() {
       <MenuIcon fontSize='large'onClick={openDrawer} className="popout-menu__menu-icon"></MenuIcon>
       <Drawer anchor='left' open={open} onClose={closeDrawer}>
         <div className="popout-menu__drawer-div">
-          <h1>I am in the drawer</h1>
+          <h2>My Info</h2>
+          <div>Email</div>
+          <div>My Profile</div>
+          <div>My Data</div>
         </div>
       </Drawer>
     </div>

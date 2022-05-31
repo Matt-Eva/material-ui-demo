@@ -1,0 +1,10 @@
+.profileMenu {
+    grid-column: 6;
+    justify-self: right;
+    cursor: pointer;
+}
+
+.profileMenu button{
+    padding: 0px;
+    padding-right: 15px;
+}
