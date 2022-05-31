@@ -4,3 +4,14 @@
   box-sizing: border-box;
   font-family: Roboto;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 300ms;
+}
+
+a:hover {
+  color: hsl(0, 0%, 40%);
+  transition: 300ms;
+}

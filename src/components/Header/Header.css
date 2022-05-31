@@ -1,0 +1,26 @@
+.header {
+    grid-row: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 200px 50px 50px calc(100vw - 480px) 140px ;
+    padding-right: 10px;
+    background-color: hsl(200, 90%, 60%);
+}
+
+.header__logo{
+    grid-row: 1;
+    grid-column: 2;
+    padding-top: 1px;
+    font-weight: normal;
+}
+
+.header__nav-link{
+    padding-top: 4px;
+}
+.header__home-link{
+    grid-column: 3;
+}
+
+.header__about-link{
+    grid-column: 4;
+}
