@@ -64,7 +64,7 @@ Check out MUI's <a href="https://mui.com/material-ui/guides/minimizing-bundle-si
 
 This example application uses a variety of different MUI components to implement common webpage features - modals, dropdown menus, text fields, hidden sidebars, and more. Some of these components require some setup to get working. I'll be discussing what goes into setting up each component. You can familiarize yourself with the setup of these components to get used to working with MUI.
 
-#### Modals
+### Modals
 
 You may not be familiar with the term 'modal', but you've certainly encountered them before. A modal refers to a pop-up window that appears as an overlay over the rest of your webpage. If you've already forked, cloned, and installed this application, go ahead and start it up. Clicking on the blue 'login' button in the upper right-hand corner will open up a login modal.
 
