@@ -66,7 +66,7 @@ This example application uses a variety of different MUI components to implement
 
 ### Modals
 
-You may not be familiar with the term 'modal', but you've certainly encountered them before. A modal refers to a pop-up window that appears as an overlay over the rest of your webpage. If you've already forked, cloned, and installed this application, go ahead and start it up. Clicking on the blue 'login' button in the upper right-hand corner will open up a login modal.
+You may not be familiar with the term 'modal', but you've certainly encountered them before. A modal refers to a pop-up window that appears as an overlay over the rest of your webpage. If you've already forked, cloned, and installed this application, go ahead and start it up by running `npm start`. Clicking on the blue 'login' button in the upper right-hand corner will open up a login modal.
 
 Modals offer a great way to show specific components without redirecting your user to an entirely new webpage. While there are certainly times where a redirect is appropriate, using modals gives you a powerful UI tool that makes your user experience easier and more streamlined.
 
