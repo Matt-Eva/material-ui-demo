@@ -93,11 +93,11 @@ function MyComponent(){
 }
 ```
 
-Read about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
+Read more about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
 
 #### Drawer (Collapsable Menu)
 
-Read about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
+Read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
 
 
 ## Resources
