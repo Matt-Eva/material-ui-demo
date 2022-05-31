@@ -60,6 +60,10 @@ The first method is preferred because it doesn't pull in in every module from th
 
 Check out MUI's <a href="https://mui.com/material-ui/guides/minimizing-bundle-size/">documentation</a> to learn more.
 
+## Using Components
+
+This example application uses a variety of different MUI components to implement common webpage features - modals, dropdown menus, text fields, hidden sidebars, and more. Some of these components require some setup to get working. I'll be discussing what goes into setting up each component. You can familiarize yourself with the setup of these components to get used to working with MUI.
+
 #### Modals
 
 Read about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
