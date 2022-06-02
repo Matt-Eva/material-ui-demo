@@ -149,9 +149,38 @@ You can display whatever kind of content you want to display inside of modals. T
 
 Read more about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
 
-#### Drawer (Collapsable Menu)
+### Drawer (Collapsable Menu)
 
-Read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
+Drawers serve as expandle and collapsable portions of your webpage that a user can toggle based on interacting with some part of your webpage. They're similar to modals, except they often span and entire edge of your webpage and collapse and expand into and out from a specific side of your webpage. Drawers are great for storing collapseable menus, search bars, or other features that you want to keep from cluttering up the main display of your webapge.
+
+In this example, we've used a Drawer to create the pop-out menu that's toggle by the Menu icon to the left of the website name. The code that controls this Drawer is contained within the `PopoutMenu` component inside of the `Header` folder.
+
+Setting up a Drawer is quite similar to setting up a Modal. After importing it from Material UI - `import Drawer from '@mui/material/Drawer' - you can simply drop it into your code. Likes modals, drawers also have opening and closing tags - the content you want to display within the drawer is nested between those opening and closing tags.
+
+Drawers also have an `open` prop, which uses a `true` or `false` value to determine whether a drawer should be visible or hidden, as well as an `onClose` prop. You can use state and setState functions in conjunction with these props, just as you did with modals.
+
+However, drawers also have an `anchor` prop, which tells the drawer which part of the webpage it should expand from and collapse into. You can give this prop a value of `left`, `top`, `right`, or `bottom`. The full implementation of a drawer would look something like this:
+
+```
+function MyDrawer(){
+    const [open, setOpen] = useState(false)
+    
+    function toggleDrawer(){
+        setOpen(!open)
+    }
+    
+    return(
+        <div>
+            <button onClick={toggleDrawer}>Open Drawer</button>
+            <Drawer anchor='left' open={open} onClose={toggleDrawer}>
+                <h1>Some content</h1>
+            </Drawer>
+        </div>
+    )
+}
+```
+
+You can read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
 
 
 ## Advanced Components - MUI X
