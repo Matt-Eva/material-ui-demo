@@ -93,6 +93,27 @@ function MyComponent(){
 }
 ```
 
+In Material UI, modals are also designed to close whenever a user clicks outside of the main part of the modal (you can try this out yourself using this application). To manage this, modals take an `onClose` prop, which triggers a callback function that closes the modal by setting the state that controls the `open` prop to `false`. The code for this might look something like this:
+
+```
+function MyComponent(){
+    const [open, setOpen] = useState(false)
+    
+    function handleClose (){
+        setOpen(false)
+    }
+    
+    return (
+        <div>
+            <Modal open={open} onClose={handleClose}>
+            </Modal>
+        </div>
+    )
+}
+```
+
+
+
 Read more about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
 
 #### Drawer (Collapsable Menu)
