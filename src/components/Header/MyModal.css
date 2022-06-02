@@ -12,6 +12,7 @@
     padding: 0px;
     margin-right: 5px;
     transition: 300ms;
+    background-color: green;
 }
 
 .my-modal .my-modal__open-modal:hover{

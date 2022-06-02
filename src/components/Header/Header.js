@@ -7,7 +7,6 @@ import PopoutMenu from './PopoutMenu'
 import ProfileMenu from './ProfileMenu'
 
 
-
 function Header() {
   const [user, setUser] = useState(false)
 

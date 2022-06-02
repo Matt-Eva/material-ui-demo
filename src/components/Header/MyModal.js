@@ -12,6 +12,7 @@ import './MyModal.css'
 
 function MyModal({handleLogin}) {
   const [open, setOpen] = useState(false)
+
   const [showPassword, setShowPassword] = useState(false)
 
   const handleOpen = () => setOpen(true)
@@ -45,7 +46,7 @@ function MyModal({handleLogin}) {
               endAdornment={
                 showPassword ? 
                 <Tooltip title="Hide password">
-                  <IconButton aria-label='toggle password visibility' onClick={() => setShowPassword(!showPassword)}> <VisibilityOff /> </IconButton>
+                  <IconButton aria-label='toggle password visibility' onClick={() => setShowPassword(!showPassword)}> <VisibilityOff/>  </IconButton>
                 </Tooltip> : 
                 <Tooltip title="Show password">
                   <IconButton aria-label='toggle password visibility' onClick={() => setShowPassword(!showPassword)}> <Visibility /> </IconButton>

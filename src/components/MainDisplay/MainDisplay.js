@@ -3,7 +3,7 @@ import Collapse from "@mui/material/Collapse"
 import Grow from "@mui/material/Grow"
 import Fade from "@mui/material/Fade"
 import Slide from "@mui/material/Slide"
-import Switch from "@mui/material/Switch"
+import Toggle from "@mui/material/Switch"
 import {images} from "../../assets/images"
 import "./MainDisplay.css"
 
@@ -24,21 +24,21 @@ function MainDisplay() {
   return (
       <div className="main-display">
           <div className="main-display__collapse-div main-display__image-div">
-              <Switch checked={collapseShow} onClick={handleCollapse}/>
+              <Toggle checked={collapseShow} onClick={handleCollapse}/>
               <label>Reveal</label>
               <Collapse in={collapseShow} > 
                 <img src={img1} className="main-display__img"/>
               </Collapse>
           </div>
           <div className="main-display__grow-div main-display__image-div">
-              <Switch checked={growShow} onClick={handleGrow}/>
+              <Toggle checked={growShow} onClick={handleGrow}/>
               <label>Reveal</label>
               <Grow in={growShow}>
                 <img src={img2} className="main-display__img" />
               </Grow>
           </div>
           <div className='main-display__fade-div main-display__image-div'>
-              <Switch checked={fadeShow} onClick={handleFade}/>
+              <Toggle checked={fadeShow} onClick={handleFade}/>
               <label>Reveal</label>
               <Fade in={fadeShow}>
               <img src={img4} className="main-display__img" />
@@ -46,7 +46,7 @@ function MainDisplay() {
               
           </div>
           <div className='main-display__slide-div main-display__image-div' ref={slideContainerRef}>
-              <Switch checked={slideShow} onClick={handleSlide}/>
+              <Toggle checked={slideShow} onClick={handleSlide}/>
               <label>Reveal</label>
               <Slide in={slideShow} direction="up" container={slideContainerRef.current}>
                 <img src={img5} className="main-display__img" />  
