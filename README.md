@@ -62,7 +62,7 @@ Check out MUI's <a href="https://mui.com/material-ui/guides/minimizing-bundle-si
 
 ## Using Components
 
-This example application uses a variety of different MUI components to implement common webpage features - modals, dropdown menus, text fields, hidden sidebars, and more. Some of these components require some setup to get working. I'll be discussing what goes into setting up each component. You can familiarize yourself with the setup of these components to get used to working with MUI.
+This example application uses a variety of different MUI components to implement common webpage features - modals, dropdown menus, text fields, hidden sidebars, and more. Some of these components require some setup to get working. I'll be discussing what goes into setting up each component. Different components require different kinds of setup, but getting familiar with a few basic components will make setting up unfamiliar components that much easier.
 
 ### Modals
 
