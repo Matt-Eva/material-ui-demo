@@ -182,6 +182,38 @@ function MyDrawer(){
 
 You can read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
 
+### Dropdown Menus
+
+You can create a variety of different drop down menus using the MUI `Menu` component. You'll also need the `Menu Item` component to display different options. Like Modals and Drawers, Menus also have an `open` prop that is controlled by state, as well as an onClose prop that is meant to close the menu upon clickaway. Typically, menus are also set up to close when a user clicks on the menu itself - if a user is clicking on an option, it means they're done perusing the menu, which is safe to close.
+
+Menus also require an `anchorEl` prop, which tells them what element they're supposed to be dropping down from. The anchor element is controlled by state - we'll initialize the anchor state as null, then set it to the element we want our dropdown menu to appear from when that element is clicked upon. Here's what the most basic implementation of a menu would look like:
+
+```
+function MyMenu(){
+    const [anchor, setAnchor] = useState(null)
+    const [open, setOpen] = useState(false)
+    
+    function handleClick(e){
+        setAnchor(e.target)
+        setOpen(true)
+    }
+    
+    function handleClose(){
+        setOpen(false)
+    }
+    
+    return(
+        <div>
+            <button onClick={handleClick}>Open Menu</button>
+            <Menu open={open} anchorEl={anchor} onClose={handleClose} onClick={handleClose}>
+                <MenuItem>
+                    Menu option
+                </MenuItem>
+            </Menu>
+        </div>
+    )
+}
+```
 
 ## Advanced Components - MUI X
 
