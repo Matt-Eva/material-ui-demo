@@ -100,6 +100,16 @@ Read more about Modals <a href="https://mui.com/material-ui/react-modal/">Here</
 Read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
 
 
+## Advanced Components - MUI X
+
+Material UI offers a few more advanced components - specifically <a href="https://mui.com/x/react-data-grid/">data-grids</a> and <a href="https://mui.com/x/react-date-pickers/date-picker/">date-time pickers</a> - via its MUI X library. We've included a date-time picker in this application.
+
+### Date-Time Picker
+
+Using components from the MUI X library requires a few additional installations. First and foremost, to use the date-time picker, we have to run `npm install @mui/x-date-pickers`, which contains the components we'll actually be using. However, we also have to install an adapter package for the date library that we want to use in our MUI components. MUI lists <a href="https://mui.com/x/react-date-pickers/getting-started/">which adapater packages it can work with</a> - we've chosen to use datefns in this example. For that reason, we'll be running `npm install @date-io/date-fns`. If you choose a different option, you can consult MUI docs regarding which install statement you should use.
+
+
+
 ## Resources
 
 List of <a href="https://mui.com/material-ui/material-icons/">MUI Icons</a>
