@@ -62,7 +62,7 @@ Check out MUI's <a href="https://mui.com/material-ui/guides/minimizing-bundle-si
 
 ## Using Components
 
-This example application uses a variety of different MUI components to implement common webpage features - modals, dropdown menus, text fields, hidden sidebars, and more. Some of these components require some setup to get working. I'll be discussing what goes into setting up each component. Different components require different kinds of setup, but getting familiar with a few basic components will make setting up unfamiliar components that much easier.
+This example application uses a variety of different MUI components to implement common webpage features - modals, dropdown menus, text fields, hidden sidebars, and more. Some of these components require some setup to get working. I'll be discussing what goes into setting up each component. Different components require different kinds of setup, but getting familiar with a few basic components will make setting up unfamiliar components that much easier. There are too many different MUI components to cover in this single example, but we'll cover some useful ones that can add great functionality to your webpage.
 
 ### Modals
 
@@ -112,7 +112,40 @@ function MyComponent(){
 }
 ```
 
+Finally, we need something that's responsible for opening the modal. In this application, I've used a button that triggers a callback function that sets the `open` state to true. So, code for a fully functioning modal might look like this:
 
+
+```
+function MyComponent(){
+    const [open, setOpen] = useState(false)
+    
+    function handleOpen(){
+        setOpen(true)
+    }
+    
+    function handleClose (){
+        setOpen(false)
+    }
+    
+    return (
+        <div>
+            <button onClick={handleOpen}>open modal</button>
+            <Modal open={open} onClose={handleClose}>
+            </Modal>
+        </div>
+    )
+}
+```
+
+If you wanted to make this code DRYer, you could always condense the handleOpen and handleClose functions into a single function:
+
+```
+function toggleModal(){
+    setOpen(!open)
+}
+```
+
+You can display whatever kind of content you want to display inside of modals. The modal itself will resize to accommodate the size of the content inside of it (for example, the `my-modal__modal-content` `div` has a fixed width and height, which determines the size of the modal in this example). In this case, I've displayed a login form, which I've created using some other MUI components, such as FormControl, InputLabel, FilledInput, Tooltip, IconButton, and some icons from the MUI icon library. Feel free to read up on documentation about these different components to figure out how you might best want to use them. MUI's component library is extensive, but their docs are very helpful once you get used to reading them. 
 
 Read more about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
 
