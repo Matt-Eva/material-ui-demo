@@ -106,7 +106,7 @@ Material UI offers a few more advanced components - specifically <a href="https:
 
 ### Date-Time Picker
 
-Using components from the MUI X library requires a few additional installations. First and foremost, to use the date-time picker, we have to run `npm install @mui/x-date-pickers`, which contains the components we'll actually be using. However, we also have to install an adapter package for the date library that we want to use in our MUI components. MUI lists <a href="https://mui.com/x/react-date-pickers/getting-started/">which adapater packages it can work with</a> - we've chosen to use datefns in this example. For that reason, we'll be running `npm install @date-io/date-fns`. If you choose a different option, you can consult MUI docs regarding which install statement you should use.
+<!-- Using components from the MUI X library requires a few additional installations. First and foremost, to use the date-time picker, we have to run `npm install @mui/x-date-pickers`, which contains the components we'll actually be using. However, we also have to install an adapter package for the date library that we want to use in our MUI components. MUI lists <a href="https://mui.com/x/react-date-pickers/getting-started/">which adapater packages it can work with</a> - we've chosen to use datefns in this example. For that reason, we'll be running `npm install @date-io/date-fns`. If you choose a different option, you can consult MUI docs regarding which install statement you should use. -->
 
 
 
