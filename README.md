@@ -147,7 +147,7 @@ function toggleModal(){
 
 You can display whatever kind of content you want to display inside of modals. The modal itself will resize to accommodate the size of the content inside of it (for example, the `my-modal__modal-content` `div` has a fixed width and height, which determines the size of the modal in this example). In this case, I've displayed a login form, which I've created using some other MUI components, such as FormControl, InputLabel, FilledInput, Tooltip, IconButton, and some icons from the MUI icon library. Feel free to read up on documentation about these different components to figure out how you might best want to use them. MUI's component library is extensive, but their docs are very helpful once you get used to reading them. 
 
-Read more about Modals <a href="https://mui.com/material-ui/react-modal/">Here</a>.
+Read more about Modals <a href="https://mui.com/material-ui/react-modal/">here</a>.
 
 ### Drawer (Collapsable Menu)
 
@@ -180,11 +180,11 @@ function MyDrawer(){
 }
 ```
 
-You can read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">Here</a>.
+You can read more about Drawers <a href="https://mui.com/material-ui/react-drawer/">here</a>.
 
 ### Dropdown Menus
 
-You can create a variety of different drop down menus using the MUI `Menu` component. You'll also need the `Menu Item` component to display different options. Like Modals and Drawers, Menus also have an `open` prop that is controlled by state, as well as an onClose prop that is meant to close the menu upon clickaway. Typically, menus are also set up to close when a user clicks on the menu itself - if a user is clicking on an option, it means they're done perusing the menu, which is safe to close.
+You can create a variety of different drop down menus using the MUI `Menu` component. You'll also need the `Menu Item` component to display different options. Like Modals and Drawers, Menus also have an `open` prop that is controlled by state, as well as an `onClose` prop that is meant to close the menu upon clickaway. Typically, menus are also set up to close when a user clicks on the menu itself - if a user is clicking on an option, it means they're done perusing the menu, which is safe to close.
 
 Menus also require an `anchorEl` prop, which tells them what element they're supposed to be dropping down from. The anchor element is controlled by state - we'll initialize the anchor state as null, then set it to the element we want our dropdown menu to appear from when that element is clicked upon. Here's what the most basic implementation of a menu would look like:
 
@@ -215,15 +215,49 @@ function MyMenu(){
 }
 ```
 
+You can read more about Menus <a href="https://mui.com/material-ui/react-menu/">here</a>.
+
 ## Advanced Components - MUI X
 
-Material UI offers a few more advanced components - specifically <a href="https://mui.com/x/react-data-grid/">data-grids</a> and <a href="https://mui.com/x/react-date-pickers/date-picker/">date-time pickers</a> - via its MUI X library. We've included a date-time picker in this application.
+Material UI offers a few more advanced components - specifically <a href="https://mui.com/x/react-data-grid/">data-grids</a> and <a href="https://mui.com/x/react-date-pickers/date-picker/">date-time pickers</a> - via its MUI X library. We've included a date-time picker in this application in our `Calendar` component inside of our `MainDisplay` folder.
 
 ### Date-Time Picker
 
 Using components from the MUI X library requires a few additional installations. First and foremost, to use the date-time picker, we have to run `npm install @mui/x-date-pickers`, which contains the components we'll actually be using. However, we also have to install an adapter package for the date library that we want to use in our MUI components. MUI lists <a href="https://mui.com/x/react-date-pickers/getting-started/">which adapater packages it can work with</a> - we've chosen to use date-fns in this example. For that reason, we'll be running `npm install date-fns @date-io/date-fns`. If you choose a different option, you can consult MUI docs regarding which install statement you should use.
 
+Once you have everything installed, there are a few different items you'll need to import into your component:
+```
+import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns'
+import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider'
+import {DatePicker} from '@mui/x-date-pickers/DatePicker'
+import TextField from '@mui/material/Textfield'
+```
+Our `DatePicker` is our actually component, while our `LocalizationProvider` is what we wrap our `DatePicker` component in. The `LocalizationProvider` takes a `dateAdapter` prop, which we pass our `AdapterDateFns` to. Finally, we're using a TextField component from the MUI library to display the user input field.
 
+Our `DatePicker` component takes several props itself. To get it up and running, it will need a `label`, a `value` that's controlled by state, an `onChange` handler that updates the state that controls the value, and a `renderInput` prop that takes a callback function that returns our `TextField` component. Altogether, a minimally functional DatePicker component would look something like this:
+
+```
+function Calendar() {
+  const [value, setValue] = useState(null)
+
+  return (
+    <div className='calendar'>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <DatePicker 
+            label="Schedule date" 
+            value={value} 
+            onChange={(newValue)=>{
+              setValue(newValue)
+            }}
+            renderInput={(params) => <TextField {...params} />}  
+          />
+        </LocalizationProvider>
+
+    </div>
+  )
+}
+```
+You can read more about DatePickers <a href="https://mui.com/x/react-date-pickers/getting-started/">here</a>.
 
 ## Resources
 
