@@ -5,6 +5,7 @@
 
 .popout-menu__menu-icon{
     cursor: pointer;
+    margin-left: 2px;
 }
 
 .popout-menu__drawer-div {

@@ -6,6 +6,7 @@ import './PopoutMenu.css'
 
 function PopoutMenu() {
   const [open, setOpen] = useState(false)
+  
   const openDrawer = () => setOpen(true)
   const closeDrawer = () => setOpen(false)
 
