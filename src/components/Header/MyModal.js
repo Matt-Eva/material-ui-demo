@@ -23,17 +23,13 @@ function MyModal({handleLogin}) {
     handleLogin()
   }
 
-  function handleChange(e){
-
-  }
-
   return (
     <div className="my-modal">
      <Button variant='contained' onClick={handleOpen} className="my-modal__open-modal">Login</Button>
       <Modal open={open} onClose={handleClose}>
         <div className="my-modal__modal-content">
           <h3 className="my-modal__modal-header">Please enter Username and Password</h3>
-          <form className="my-modal__modal-form" onSubmit={handleSubmit} onChange={handleChange}>
+          <form className="my-modal__modal-form" onSubmit={handleSubmit}>
             <FormControl  className='my-modal__username'>
               <InputLabel htmlFor='username' >Username</InputLabel>
               <FilledInput id='username' type='text'/>
@@ -46,7 +42,7 @@ function MyModal({handleLogin}) {
               endAdornment={
                 showPassword ? 
                 <Tooltip title="Hide password">
-                  <IconButton aria-label='toggle password visibility' onClick={() => setShowPassword(!showPassword)}> <VisibilityOff/>  </IconButton>
+                  <IconButton aria-label='toggle password visibility' onClick={() => setShowPassword(!showPassword)}> <VisibilityOff></VisibilityOff>  </IconButton>
                 </Tooltip> : 
                 <Tooltip title="Show password">
                   <IconButton aria-label='toggle password visibility' onClick={() => setShowPassword(!showPassword)}> <Visibility /> </IconButton>

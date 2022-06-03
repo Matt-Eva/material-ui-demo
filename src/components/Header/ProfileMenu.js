@@ -7,38 +7,35 @@ import './ProfileMenu.css'
 
 function ProfileMenu({handleLogout}) {
     const [anchor, setAnchor] = useState(null)
-    const open = Boolean(anchor)
+    const [open, setOpen]= useState(false)
+    // const open = Boolean(anchor)
 
     function handleClick(e){
-      console.log(e.target)
-      setAnchor(e.currentTarget)
+      setAnchor(e.target)
+      setOpen(true)
     }
 
     function handleClose(){
-      setAnchor(null)
+      setOpen(false)
     }
 
 
   return (
-    <div className="profileMenu">
-        <IconButton 
-        onClick={handleClick}
-        >
-            <Avatar />
-        </IconButton>
+    <div className="profile-menu">
+        <Avatar onClick={handleClick} className="profile-menu__button"></Avatar>
         <Menu 
         open={open} 
         anchorEl={anchor} 
         onClose={handleClose}
         onClick={handleClose}
-        id='account-menu'
+
         PaperProps={{
           elevation: 0,
           sx: {
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-            mt: 1.5,
-            '& .MuiAvatar-root': {
+            mt: 2.6,
+            '&.MuiAvatar-root': {
               width: 32,
               height: 32,
               ml: -0.5,
@@ -49,19 +46,17 @@ function ProfileMenu({handleLogout}) {
               display: 'block',
               position: 'absolute',
               top: 0,
-              right: 13,
+              right: 16,
               width: 10,
               height: 10,
               bgcolor: 'background.paper',
               transform: 'translateY(-50%) rotate(45deg)',
               zIndex: 0,
             },
-          },
+          }
         }}
-        transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-        anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
         >
-            <MenuItem>
+            <MenuItem className="profile-menu__menu-item">
             Profile
             </MenuItem>
             <MenuItem>

@@ -1,0 +1,23 @@
+.walrus-card {
+    height: 370px;
+    width: 250px;
+    background-color: hsl(180, 70%, 85%);
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 5px;
+}
+
+.walrus-card--slide {
+    overflow: hidden;
+}
+
+.walrus-card__profile-img {
+    object-fit: cover;
+    width: 200px;
+    height: 250px;
+    margin-left: 25px;
+}
+
+.walrus-card__reveal-label{
+    margin-top: 10px;
+}

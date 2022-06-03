@@ -13,7 +13,7 @@ function PopoutMenu() {
   return (
     <div className="popout-menu">
       <MenuIcon fontSize='large'onClick={openDrawer} className="popout-menu__menu-icon"></MenuIcon>
-      <Drawer anchor='right' open={open} onClose={closeDrawer}>
+      <Drawer anchor='left' open={open} onClose={closeDrawer}>
         <div className="popout-menu__drawer-div">
           <h2>My Info</h2>
           <div>Email</div>
