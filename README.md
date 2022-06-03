@@ -1,6 +1,6 @@
 # Material UI Demo
 
-This application is a demonstration of how to use Material UI in React. We'll cover installation, setup, and use of MUI components, as well as discussing use of MUI with other CSS techniques.
+This application is a demonstration of how to use Material UI in React. We'll cover installation, setup, and use of MUI components, as well as discussing use of MUI with other CSS techniques. Fork, clone, and install this app to follow along and play with the code yourself.
 
 ## Installation
 
