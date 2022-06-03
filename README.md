@@ -131,6 +131,7 @@ function MyComponent(){
         <div>
             <button onClick={handleOpen}>open modal</button>
             <Modal open={open} onClose={handleClose}>
+                <div>Some content</div>
             </Modal>
         </div>
     )
