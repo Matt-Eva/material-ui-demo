@@ -17,7 +17,7 @@ MUI notes on its installation page that it was designed with the Roboto font in 
 
 ### Setting Default Styles
 
-We're going to want to set up some default styles to ensure that MUI's library of components works correctly. It's likely a good idea to set up default styles like this regardless of whether or not you're working with a CSS library, as it will make styling easier and allow you to set some basic themes for your webpage.
+We're going to want to set up some default styles to make styling our webpage a little easier. It's likely a good idea to set up default styles like this regardless of whether or not you're working with a CSS library, although it's not necessary.
 
 First, we're going to want to clear away all of the CSS styles in `App.css` and `index.css` that were created when we ran `create-react-app`. Then, we're going to want to add our default styles in index.css that will apply to every JSX element in our application. We can do this by using the universal selector `*`. Here are the following styles we'll want to set:
 
