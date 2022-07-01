@@ -233,7 +233,7 @@ import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider'
 import {DatePicker} from '@mui/x-date-pickers/DatePicker'
 import TextField from '@mui/material/Textfield'
 ```
-Our `DatePicker` is our actually component, while our `LocalizationProvider` is what we wrap our `DatePicker` component in. The `LocalizationProvider` takes a `dateAdapter` prop, which we pass our `AdapterDateFns` to. Finally, we're using a TextField component from the MUI library to display the user input field.
+Our `DatePicker` is our actual component, while our `LocalizationProvider` is what we wrap our `DatePicker` component in. The `LocalizationProvider` takes a `dateAdapter` prop, which we pass our `AdapterDateFns` to. Finally, we're using a TextField component from the MUI library to display the user input field.
 
 Our `DatePicker` component takes several props itself. To get it up and running, it will need a `label`, a `value` that's controlled by state, an `onChange` handler that updates the state that controls the value, and a `renderInput` prop that takes a callback function that returns our `TextField` component. Altogether, a minimally functional DatePicker component would look something like this:
 
